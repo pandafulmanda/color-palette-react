@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import myStore from "./store";
 
@@ -18,4 +19,12 @@ const Profile = (props) => {
   </form>)
 }
 
-export default Profile;
+const ConnectedProfile = connect(
+  (state) => {
+    return {
+      profile: state.profile
+    }
+  }
+)(Profile)
+
+export default ConnectedProfile;

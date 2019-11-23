@@ -9,10 +9,11 @@ import Profile from "./Profile";
 // require('./App.css')
 
 function App(props) {
+  console.log(props, 'this is no longer the state object')
   return (
     <div className="container">
-      <Profile profile={props.profile}/>
-      <ColorBoxes boxes={props.boxes}/>
+      <Profile />
+      <ColorBoxes />
     </div>
   );
 }
